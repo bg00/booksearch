@@ -12,7 +12,7 @@ const mongoose = require("mongoose");
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI ||
-    "mongodb://user:password1@ds061365.mlab.com:61365/heroku_jrkzrdwr"
+    "mongodb://user:password1@ds155130.mlab.com:55130/heroku_pt0lk1f9"
 );
 
 // Serve up static assets (usually on heroku)
