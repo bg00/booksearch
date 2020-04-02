@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node ./client/scripts/seedDB.js"
+    "seed": "node /client/scripts/seedDB.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "if-env": "^1.0.4",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
+    "next": "^9.3.4",
     "node": "^13.12.0",
     "nodemon": "^2.0.2",
     "react": "^16.13.1",
