@@ -3,5 +3,6 @@ div.jumbotron {
 }
 
 .white {
-  color: floralwhite;
+  color: black;
+  background-color: white;
 }

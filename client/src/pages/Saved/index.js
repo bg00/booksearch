@@ -44,25 +44,26 @@ class Saved extends Component {
           <Col size="md-12">
             {this.state.savedBooks.length > 0 ? (
               <BookList>
-                {this.state.savedBooks.map(book => {
-                  console.log(book);
-                  return (
-                    <div>
-                      <BookListItem
-                        key={book._id}
-                        authors={book.authors}
-                        title={book.title}
-                        synopsis={book.synopsis}
-                        link={book.link}
-                        thumbnail={book.thumbnail}
-                        // delete={()=> this.deleteFromDB(book._id)}
-                      />
-                      <RemoveBookBtn
-                        onClick={() => this.deleteFromDB(book._id)}
-                      />
-                    </div>
-                  );
-                })}
+                {Array.isArray(this.state.savedBooks) &&
+                  this.state.savedBooks.map(book => {
+                    console.log(book);
+                    return (
+                      <div>
+                        <BookListItem
+                          key={book._id}
+                          authors={book.authors}
+                          title={book.title}
+                          synopsis={book.synopsis}
+                          link={book.link}
+                          thumbnail={book.thumbnail}
+                          // delete={()=> this.deleteFromDB(book._id)}
+                        />
+                        <RemoveBookBtn
+                          onClick={() => this.deleteFromDB(book._id)}
+                        />
+                      </div>
+                    );
+                  })}
               </BookList>
             ) : (
               <EmptyList />
